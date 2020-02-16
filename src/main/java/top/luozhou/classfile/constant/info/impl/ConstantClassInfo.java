@@ -14,7 +14,7 @@ public class ConstantClassInfo implements ConstantInfo {
 
     private int index;
 
-
+    @Override
     public String getValue() {
         return null;
     }

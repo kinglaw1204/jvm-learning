@@ -13,7 +13,7 @@ public class ConstantFloatInfo implements ConstantInfo {
     public final int tag = 4;
 
     private float bytes;
-
+    @Override
     public String getValue() {
         return null;
     }

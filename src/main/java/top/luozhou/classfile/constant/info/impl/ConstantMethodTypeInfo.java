@@ -12,7 +12,7 @@ import top.luozhou.classfile.constant.info.ConstantInfo;
 public class ConstantMethodTypeInfo implements ConstantInfo {
     public final int tag = 16;
     private int descriptorIndex;
-
+    @Override
     public String getValue() {
         return null;
     }

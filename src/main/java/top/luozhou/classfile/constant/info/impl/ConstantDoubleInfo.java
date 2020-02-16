@@ -12,7 +12,7 @@ import top.luozhou.classfile.constant.info.ConstantInfo;
 public class ConstantDoubleInfo implements ConstantInfo {
     public final int tag = 6;
     private double bytes;
-
+    @Override
     public String getValue() {
         return null;
     }

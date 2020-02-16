@@ -14,7 +14,7 @@ public class ConstantStringInfo implements ConstantInfo {
 
     private String index;
 
-
+    @Override
     public String getValue() {
         return null;
     }

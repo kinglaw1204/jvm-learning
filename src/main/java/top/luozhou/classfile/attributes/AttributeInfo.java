@@ -9,6 +9,9 @@ import top.luozhou.classfile.util.ClassReader;
  **/
 public interface AttributeInfo {
 
+    /** 读取字节信息
+     * @param reader
+     */
     void readInfo(ClassReader reader);
 
 }

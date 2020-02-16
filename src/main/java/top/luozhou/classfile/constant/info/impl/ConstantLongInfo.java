@@ -14,7 +14,7 @@ public class ConstantLongInfo  implements ConstantInfo {
 
     private long bytes;
 
-
+    @Override
     public String getValue() {
         return null;
     }

@@ -14,7 +14,7 @@ public class ConstantIntegerInfo implements ConstantInfo {
 
     private int bytes;
 
-
+    @Override
     public String getValue() {
         return null;
     }

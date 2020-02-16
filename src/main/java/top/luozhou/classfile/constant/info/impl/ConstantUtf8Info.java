@@ -22,7 +22,7 @@ public class ConstantUtf8Info implements ConstantInfo {
      * 字符串
      **/
     private String bytes;
-
+    @Override
     public String getValue() {
         return null;
     }

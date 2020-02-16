@@ -6,8 +6,10 @@ package top.luozhou.classfile.constant.info;
  * @create: 2020-02-16 16:20
  **/
 public interface ConstantInfo {
+
     /**
      * 获取常量信息
+     * @return
      */
     String getValue();
 }

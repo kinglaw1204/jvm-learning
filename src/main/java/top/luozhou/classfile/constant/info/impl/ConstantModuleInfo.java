@@ -13,7 +13,7 @@ public class ConstantModuleInfo implements ConstantInfo {
     public final int tag=19;
     private int nameIndex;
 
-
+    @Override
     public String getValue() {
         return null;
     }
