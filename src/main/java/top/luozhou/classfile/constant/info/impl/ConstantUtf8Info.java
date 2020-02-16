@@ -1,6 +1,7 @@
-package top.luozhou.classfile.constant.info;
+package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
  * @description: utf-8编码字符串
@@ -8,7 +9,7 @@ import lombok.Data;
  * @create: 2020-02-07 17:43
  **/
 @Data
-public class ConstantUtf8Info {
+public class ConstantUtf8Info implements ConstantInfo {
     /**
      * 标志
      */
@@ -22,4 +23,7 @@ public class ConstantUtf8Info {
      **/
     private String bytes;
 
+    public String getValue() {
+        return null;
+    }
 }

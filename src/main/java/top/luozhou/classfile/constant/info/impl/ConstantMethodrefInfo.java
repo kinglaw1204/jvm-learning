@@ -1,6 +1,7 @@
-package top.luozhou.classfile.constant.info;
+package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
  * @description: 类中方法的符号引用
@@ -8,9 +9,12 @@ import lombok.Data;
  * @create: 2020-02-07 21:13
  **/
 @Data
-public class ConstantMethodrefInfo {
+public class ConstantMethodrefInfo implements ConstantInfo {
     public final int tag = 10;
     private int classInfoIndex;
     private int nameAndTypeIndex;
 
+    public String getValue() {
+        return null;
+    }
 }

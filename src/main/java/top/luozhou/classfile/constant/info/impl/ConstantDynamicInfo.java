@@ -1,6 +1,7 @@
-package top.luozhou.classfile.constant.info;
+package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
  * @description: 动态计算常量
@@ -8,10 +9,13 @@ import lombok.Data;
  * @create: 2020-02-07 21:18
  **/
 @Data
-public class ConstantDynamicInfo {
+public class ConstantDynamicInfo  implements ConstantInfo {
     public final int tag = 17;
 
     private int bootstrapMethodAttrIndex;
     private int nameAndTypeIndex;
 
+    public String getValue() {
+        return null;
+    }
 }

@@ -1,6 +1,7 @@
 package top.luozhou.classfile;
 
 import lombok.Data;
+import top.luozhou.classfile.attributes.AttributeInfo;
 
 /**
  * @description: 类文件

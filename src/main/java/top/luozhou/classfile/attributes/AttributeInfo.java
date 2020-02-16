@@ -1,4 +1,4 @@
-package top.luozhou.classfile;
+package top.luozhou.classfile.attributes;
 
 import top.luozhou.classfile.util.ClassReader;
 
