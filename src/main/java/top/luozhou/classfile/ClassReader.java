@@ -1,4 +1,6 @@
-package top.luozhou.classfile.util;
+package top.luozhou.classfile;
+
+import top.luozhou.classfile.util.ByteUtil;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

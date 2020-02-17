@@ -1,6 +1,6 @@
 package top.luozhou.classfile.attributes;
 
-import top.luozhou.classfile.util.ClassReader;
+import top.luozhou.classfile.ClassReader;
 
 /**
  * @description: 属性表接口类

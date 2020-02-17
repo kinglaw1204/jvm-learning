@@ -74,20 +74,26 @@ public class ClassPath {
         userClasspath = ClassEntry.create(cpOption);
     }
 
-
+    /**
+     * 类加载最先给根加载器加载，然后给扩展加载器加载，最后是普通加载器加载
+     *
+     * @param className
+     * @return
+     * @throws Exception
+     */
     public byte[] readClass(String className) throws Exception {
         className = className + CLASS_SUFIX;
 
         try {
             return bootClasspath.readClass(className);
         } catch (Exception ignored) {
-            ignored.printStackTrace();
+            //找不到，忽略，委托下一个查找
         }
 
         try {
-            return bootClasspath.readClass(className);
+            return extClasspath.readClass(className);
         } catch (Exception ignored) {
-            ignored.printStackTrace();
+            //找不到，忽略，委托下一个查找
         }
 
         return userClasspath.readClass(className);

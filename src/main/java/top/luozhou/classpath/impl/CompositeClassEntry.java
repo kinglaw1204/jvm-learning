@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @description: 组合模式class入口
+ * @description: 组合模式class入口，一次扫描多个类
  * @author: luozhou kinglaw1204@gmail.com
  * @create: 2020-02-16 22:10
  **/
@@ -22,9 +22,21 @@ public class CompositeClassEntry implements ClassEntry {
 
     @Override
     public byte[] readClass(String className) throws Exception {
+
         for (ClassEntry entry : entries) {
-            return entry.readClass(className);
+            byte[] bytes = null;
+            try {
+                bytes = entry.readClass(className);
+            } catch (Exception e) {
+                continue;
+                //忽略异常，继续执行
+            }
+            if (bytes != null && bytes.length > 0) {
+                return bytes;
+            }
+
         }
+
         throw new Exception("class not found: " + className);
     }
 }
