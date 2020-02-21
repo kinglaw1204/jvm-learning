@@ -1,6 +1,5 @@
 package top.luozhou;
 
-import top.luozhou.classfile.ClassFile;
 import top.luozhou.classfile.ClassReader;
 import top.luozhou.classpath.ClassPath;
 import top.luozhou.model.Args;
@@ -32,7 +31,7 @@ public class JvmApplication {
             byte[] classData = cp.readClass(className);
             System.out.println("class data: " + Arrays.toString(classData));
             ClassReader reader = new ClassReader(classData);
-            ClassFile classFile = reader.parseClassFile();
+           // ClassFile classFile = reader.parseClassFile();
             System.out.println("class data:" + Arrays.toString(classData));
         } catch (Exception e) {
             System.out.println("Could not find or load  class " +args.getClasspath());
