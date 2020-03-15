@@ -33,5 +33,4 @@ public class CompositeClassEntry implements ClassEntry {
         throw new Exception("class not found: " + className);
     }
 
-
 }

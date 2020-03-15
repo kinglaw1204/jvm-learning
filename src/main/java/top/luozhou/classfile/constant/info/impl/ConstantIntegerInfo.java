@@ -1,6 +1,7 @@
 package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.ClassReader;
 import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
@@ -14,8 +15,18 @@ public class ConstantIntegerInfo implements ConstantInfo {
 
     private int bytes;
 
+    //读取U4类型数据
+    public ConstantIntegerInfo(ClassReader reader) {
+        bytes = reader.nextU4ToInt();
+    }
+
     @Override
     public String getValue() {
-        return null;
+        return bytes + "";
+    }
+
+    @Override
+    public String toString() {
+        return "Integer: " + bytes;
     }
 }

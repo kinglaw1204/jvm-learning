@@ -1,6 +1,7 @@
 package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.ClassReader;
 import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
@@ -12,8 +13,18 @@ import top.luozhou.classfile.constant.info.ConstantInfo;
 public class ConstantDoubleInfo implements ConstantInfo {
     public final int tag = 6;
     private double bytes;
+
+    public ConstantDoubleInfo(ClassReader reader) {
+        bytes = reader.next2U4Double();
+    }
+
     @Override
     public String getValue() {
-        return null;
+        return bytes + "";
+    }
+
+    @Override
+    public String toString() {
+        return "Double:" + bytes;
     }
 }

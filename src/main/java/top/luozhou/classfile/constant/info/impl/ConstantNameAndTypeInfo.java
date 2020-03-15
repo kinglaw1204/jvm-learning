@@ -1,6 +1,8 @@
 package top.luozhou.classfile.constant.info.impl;
 
 import lombok.Data;
+import top.luozhou.classfile.ClassReader;
+import top.luozhou.classfile.ConstantPool;
 import top.luozhou.classfile.constant.info.ConstantInfo;
 
 /**
@@ -11,11 +13,24 @@ import top.luozhou.classfile.constant.info.ConstantInfo;
 @Data
 public class ConstantNameAndTypeInfo implements ConstantInfo {
     public final  int tag = 12;
-    private int fieldAndMethodIndex;
-    private int fieldAndMethodDescrib;
+    private int nameIndex;
+    private int descriptorIndex;
+    private ConstantPool constPool;
 
+    public ConstantNameAndTypeInfo(ConstantPool aConstPool, ClassReader reader) {
+        this.nameIndex = reader.nextU2ToInt();
+        this.descriptorIndex = reader.nextU2ToInt();
+        this.constPool = aConstPool;
+    }
     @Override
     public String getValue() {
-        return null;
+        return "";
     }
+
+    @Override
+    public String toString() {
+        return this.constPool.getUTF8(this.nameIndex) + "&"
+                + this.constPool.getUTF8(this.descriptorIndex);
+    }
+
 }
